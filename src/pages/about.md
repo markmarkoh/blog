@@ -1,9 +1,7 @@
-Welcome to this blog template by [cassidoo](https://cassidoo.co)!
+I'm the VP of Engineering at a small-but-mighty [construction tech startup](https://www.buildforce.com/), where I lead our Austin-based product & engineering capacity. 
 
-It's using Astro and TinaCMS. You can [clone it on GitHub](https://github.com/cassidoo/blahg) to use it for yourself, and see how it works! I would _love_ if you told me when you do use it, I love seeing variations on it!
+This is my space to talk about projects, working at early stage startups, and computer programming in general. 
 
-The tags at the bottom of the page are dynamically generated. The more tags you use, the more tags are added to the list! Posts are simple markdown files.
+I occasionally publish episodes of [commithistory](https://commithistory.substack.com/), a show about significant commits in open source projects, and I'm often working on some low-stress side project which end up on my [github](https://github.com/markmarkoh).
 
-You should also check out [my newsletter](https://cassidoo.co/newsletter), or my word game [Jumblie](https://jumblie.com/?utm_campaign=blahgtmp&utm_source=github), or my [GitHub profile](https://github.com/cassidoo). Or don't. Follow your dreams.
-
-Enjoy!
+See you around!

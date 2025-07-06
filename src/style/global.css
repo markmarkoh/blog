@@ -234,6 +234,15 @@ h3 {
 	max-width: 350px;
 }
 
+.img-frame {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 article :not(.article-title) {
 	line-height: 1.8;
 }

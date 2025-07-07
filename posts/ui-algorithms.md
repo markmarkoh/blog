@@ -13,7 +13,7 @@ User Interface Algorithms: Part 1
 
 \=================================
 
-\> 💡 This is a written version of a \[talk I gave at JSConf in 2014]\(https\://www\.youtube.com/watch?v=90NsjKvz9Ns), but its lessons are even more relevant today.
+\> 💡 This is a written version of a \[talk I gave at JSConf in 2014]\([https://www.youtube.com/watch?v=90NsjKvz9Ns](https://www.youtube.com/watch?v=90NsjKvz9Ns)), but its lessons are even more relevant today.
 
 Admittedly, the title “User Interface Algorithms” has a good deal of ambiguity, especially back in 2014 when the most popular frameworks were Backbone.js and Angular, and modern UI development was only just picking up steam.
 
@@ -25,16 +25,11 @@ Defining Algorithm
 
 Let’s start with a baseline for “algorithm” in this context, finding the largest item in an unsorted list:
 
-\`\`\`
-
-largest ← L\\\[0\\]  
-
-for item in lists L\\\[1..n\\], do  
-
-   if item > largest  
-
-      largest ← item  
-
+\`\`\`\
+largest ← L\\\[0\\]\
+for item in lists L\\\[1..n\\], do\
+if item > largest\
+    largest ← item  \
 return largest
 
 \`\`\`
@@ -45,7 +40,7 @@ Simple enough! Maybe something you’d see in an entry-level Leetcode interview.
 
 \============================
 
-During the Obama/Romney presidential race in 2012, the New York Times released an interactive data visualization called \[“512 Paths To The White House”]\(http\://archive.nytimes.com/www\.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html).
+During the Obama/Romney presidential race in 2012, the New York Times released an interactive data visualization called \[“512 Paths To The White House”]\([http://archive.nytimes.com/www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html](http://archive.nytimes.com/www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html)).
 
 Since we’re talking about Computer Science already, the number 512 is very round in our field — \`2^9\`, or \`1000000000\` in binary.
 
@@ -69,11 +64,10 @@ Perhaps we can just pad each of the nodes to make their hit state larger.
 
 A simple algorithm to this effect could be:
 
-\`\`\`
+\`\`\`\
+for each node in all(Length(L)≥0), do
 
-for each node in all(Length(L)≥0), do  
-
-   node.padding ← node.radius \\\* 5 + ‘px’
+  node.padding ← node.radius \\\* 5 + ‘px’
 
 \`\`\`
 
@@ -93,21 +87,23 @@ Let’s consider a different approach — this time by calculating the distance 
 
 \`\`\`
 
-on mouse move => (event)    
+on mouse move => (event)
 
-  mX, mY ← event.mouseX, event.mouseY  
+mX, mY ← event.mouseX, event.mouseY
 
-  smallest ← L\\\[0\\]  
+smallest ← L\\\[0\\]
 
-  for node in L\\\[1..n\\], do  
+for node in L\\\[1..n\\], do
 
-    dist ← distance(\\\[mX, mY\\], node)  
+```
+dist ← distance(\\\[mX, mY\\], node)  
 
-    if dist \< smallest, then  
+if dist \< smallest, then  
 
-      smallest ← node  
+  smallest ← node  
+```
 
-  return smallest
+return smallest
 
 \`\`\`
 
@@ -147,7 +143,7 @@ Close up view of the map: ticks for deaths, and the communal water pumps marked 
 
 If we were to draw a polygon around each pump, where every location within that polygon was closest to its encapsulated pump than any other pump, we can see a terrible pattern.
 
-A modern rendering of a Voronoi tesselation laid over John Snow’s map. Source \[http\://www\.udel.edu/johnmack/frec682/cholera/cholera2.html]\(http\://www\.udel.edu/johnmack/frec682/cholera/cholera2.html)
+A modern rendering of a Voronoi tesselation laid over John Snow’s map. Source \[[http://www.udel.edu/johnmack/frec682/cholera/cholera2.html\](http://www.udel.edu/johnmack/frec682/cholera/cholera2.html)](http://www.udel.edu/johnmack/frec682/cholera/cholera2.html]\(http://www.udel.edu/johnmack/frec682/cholera/cholera2.html\))
 
 The deaths seemed concentrated in 1 particular polygon surrounding the Broad Street pump.
 
@@ -179,27 +175,31 @@ With this \`voronoi\` object, you can now add some DOM SVG elements:
 
 \`\`\`
 
-d3.select('#voronoi')  
+d3.select('#voronoi')
 
-&#x9;.selectAll('path')  
+&#x9;.selectAll('path')
 
-&#x9;.data(voronoi.polygons(data))  
+&#x9;.data(voronoi.polygons(data))
 
-&#x9;.enter()  
+&#x9;.enter()
 
-            .append('path')  
+```
+        .append('path')  
+```
 
-&#x9;    .on('mouseenter', (evt, {data}) => {  
+&#x9;    .on('mouseenter', (evt, {data}) => {
 
-           	//handle event  
+```
+       	//handle event  
+```
 
 &#x9;     })
 
 \`\`\`
 
-You can find \[a lot more examples here.]\(https\://observablehq.com/collection/@d3/d3-delaunay)
+You can find \[a lot more examples here.]\([https://observablehq.com/collection/@d3/d3-delaunay](https://observablehq.com/collection/@d3/d3-delaunay))
 
-To learn more about an algorithm for generating Voronoi tesselations, \[I highly recommend this interactive demo.]\(http\://www\.raymondhill.net/voronoi/rhill-voronoi.html)
+To learn more about an algorithm for generating Voronoi tesselations, \[I highly recommend this interactive demo.]\([http://www.raymondhill.net/voronoi/rhill-voronoi.html](http://www.raymondhill.net/voronoi/rhill-voronoi.html))
 
 Voronoi and 512 Paths To The White House
 
@@ -209,7 +209,7 @@ Using the web inspector and adding 2 quick CSS properties, we can reveal the Vor
 
 With the Voronoi borders visible, it’s clear to see how the NYT achieved that level of interactivity. Looking around the internet for more examples of this type of interactivity yields interesting results when I open the inspector and add a \`#00000\` 5px stroke to the hidden Voronoi layers:
 
-\[https\://www\.nytimes.com/interactive/2014/02/13/sports/baseball/jeter-long-lived-greatness.html?\\\_r=0\&mtrref=undefined\&gwh=83B1F3EFD80A90EAFECDBF8993A80061\&gwt=pay\&assetType=PAYWALL]\(https\://www\.nytimes.com/interactive/2014/02/13/sports/baseball/jeter-long-lived-greatness.html?\_r=0\&mtrref=undefined\&gwh=83B1F3EFD80A90EAFECDBF8993A80061\&gwt=pay\&assetType=PAYWALL)\[https\://bl.ocks.org/mbostock/8033015]\(https\://bl.ocks.org/mbostock/8033015)
+\[[https://www.nytimes.com/interactive/2014/02/13/sports/baseball/jeter-long-lived-greatness.html?\\\_r=0\&mtrref=undefined\&gwh=83B1F3EFD80A90EAFECDBF8993A80061\&gwt=pay\&assetType=PAYWALL\](https://www.nytimes.com/interactive/2014/02/13/sports/baseball/jeter-long-lived-greatness.html?\_r=0\&mtrref=undefined\&gwh=83B1F3EFD80A90EAFECDBF8993A80061\&gwt=pay\&assetType=PAYWALL)\[https://bl.ocks.org/mbostock/8033015\](https://bl.ocks.org/mbostock/8033015)](https://www.nytimes.com/interactive/2014/02/13/sports/baseball/jeter-long-lived-greatness.html?\\_r=0\&mtrref=undefined\&gwh=83B1F3EFD80A90EAFECDBF8993A80061\&gwt=pay\&assetType=PAYWALL]\(https://www.nytimes.com/interactive/2014/02/13/sports/baseball/jeter-long-lived-greatness.html?_r=0\&mtrref=undefined\&gwh=83B1F3EFD80A90EAFECDBF8993A80061\&gwt=pay\&assetType=PAYWALL\)\[https://bl.ocks.org/mbostock/8033015]\(https://bl.ocks.org/mbostock/8033015\))
 
 Next up
 
@@ -217,4 +217,4 @@ Next up
 
 In the next part, we’ll discuss hierarchical drop-down menus, and an algorithm that was invented 35 years ago but subsequently lost, then recently rediscovered.
 
-¹ Read more in \[\*\*\_The Ghost Map : The Story of London’s Most Terrifying Epidemic — And How It Changed Science, Cities, and the Modern World\_\*\*]\(https\://www\.booksamillion.com/p/Ghost-Map/Steven-Johnson/9781594482694?id=8470580372820#)
+¹ Read more in \[\*\*\_The Ghost Map : The Story of London’s Most Terrifying Epidemic — And How It Changed Science, Cities, and the Modern World\_\*\*]\([https://www.booksamillion.com/p/Ghost-Map/Steven-Johnson/9781594482694?id=8470580372820#](https://www.booksamillion.com/p/Ghost-Map/Steven-Johnson/9781594482694?id=8470580372820#))

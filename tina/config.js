@@ -73,8 +73,8 @@ export default defineConfig({
 								label: "Advice",
 							},
 							{
-								value: "events",
-								label: "Events",
+								value: "management",
+								label: "Management",
 							},
 							{
 								value: "learning",
@@ -93,8 +93,8 @@ export default defineConfig({
 								label: "Personal",
 							},
 							{
-								value: "musings",
-								label: "Musings",
+								value: "thoughts",
+								label: "Thoughts",
 							},
 						],
 					},

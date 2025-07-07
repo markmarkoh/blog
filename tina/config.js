@@ -111,6 +111,11 @@ export default defineConfig({
 						type: "datetime",
 						dateFormat: "MMM DD YYYY",
 					},
+          {
+            label: "External Url",
+            name: "external_url",
+            type: "string"
+          },
 					{
 						type: "rich-text",
 						name: "body",

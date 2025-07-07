@@ -10,6 +10,7 @@ const posts = defineCollection({
 		description: z.string(),
 		added: z.union([z.string(), z.date()]),
 		updated: z.union([z.string(), z.date()]).optional(),
+    external_url: z.string().optional(),
 		tags: z.array(z.string()),
 	}),
 });

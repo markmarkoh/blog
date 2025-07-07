@@ -96,6 +96,10 @@ export default defineConfig({
 								value: "thoughts",
 								label: "Thoughts",
 							},
+							{
+								value: "external",
+								label: "External",
+							},
 						],
 					},
 					{

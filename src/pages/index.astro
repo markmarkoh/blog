@@ -12,6 +12,7 @@ import getTags from "../scripts/getTags";
 
 const posts = await getCollection("posts");
 const tags = getTags(posts);
+console.log('POSTS!', posts);
 ---
 
 <!doctype html>

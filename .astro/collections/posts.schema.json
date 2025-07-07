@@ -59,6 +59,9 @@
             }
           ]
         },
+        "external_url": {
+          "type": "string"
+        },
         "tags": {
           "type": "array",
           "items": {

@@ -1,9 +1,12 @@
 ---
-const { url, slug, title, tags, description, date } = Astro.props;
+const { url, slug, external_url, title, tags, description, date } = Astro.props;
 ---
 
 <li class="post">
-	<a href={`/post/${slug}/`} class="title">{title}</a>
+  {!!external_url 
+    ? <a class="title" href={external_url} target="_blank">{title}</a>
+    : <a href={`/post/${slug}/`} class="title">{title}</a>
+  }
 	<time datetime={date}>
 		{
 			new Date(date).toLocaleDateString("en-us", {
@@ -14,9 +17,6 @@ const { url, slug, title, tags, description, date } = Astro.props;
 		}
 	</time>
 	<br />
-  this
-  {url}
-  and
 	{description && <span class="excerpt">{description}</span>}
 	<div>
 		{

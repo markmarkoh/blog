@@ -1,7 +1,7 @@
 ---
 title: lt - a TUI client for Linear.app
 slug: introducing-lt
-description: The TUI client no one asked for
+description: 'The TUI client no one asked for, but everyone needs a reason to learn Rust'
 tags:
   - technical
   - learning

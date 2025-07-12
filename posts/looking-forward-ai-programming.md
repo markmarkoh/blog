@@ -1,7 +1,9 @@
 ---
-title: Looking forward with AI programming
+title: AI-assisted Programming and Where It Will Take Us
 slug: looking-forward-ai-programming
-description: Three reasons why the AI programming landscape will be chaotic.
+description: >-
+  Three reasons why the AI programming landscape will be chaotic over the next
+  few years.
 tags:
   - work
   - thoughts
